@@ -1,134 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PK DARK | Pro Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PK DARK | Pro Technical Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Canvas technical background -->
+  <canvas id="tech-bg" aria-hidden="true"></canvas>
 
-  <canvas id="bg"></canvas>
+  <!-- custom cursor -->
+  <div id="cursor"></div>
 
-  <header>
-    <nav class="nav-3d">
-      <button class="nav-btn active" data-target="home">Home</button>
-      <button class="nav-btn" data-target="about">About</button>
-      <button class="nav-btn" data-target="skills">Skills</button>
-      <button class="nav-btn" data-target="projects">Projects</button>
-      <button class="nav-btn" data-target="contact">Contact</button>
+  <!-- Theme toggle -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-3d">PK DARK</div>
+    </div>
+
+    <nav class="nav-3d" role="navigation" aria-label="Main navigation">
+      <button class="nav-btn nav-3d-btn" data-target="#home">Home</button>
+      <button class="nav-btn nav-3d-btn" data-target="#about">About</button>
+      <button class="nav-btn nav-3d-btn" data-target="#skills">Skills</button>
+      <button class="nav-btn nav-3d-btn" data-target="#projects">Projects</button>
+      <button class="nav-btn nav-3d-btn" data-target="#contact">Contact</button>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="page active">
-      <h1 class="glow-3d">Hi, I'm <span>PK DARK</span></h1>
-      <p class="tagline">B.Arch Student | Tech Enthusiast | Creative Designer</p>
-      <p class="section-paragraph">
-        Welcome to my pro technical portfolio! I merge architecture with cutting-edge technology and creative design to deliver futuristic, high-impact solutions. Dive in to explore my skills, projects, and more.
-      </p>
+    <!-- HOME -->
+    <section id="home" class="page page-3d" data-title="Home">
+      <div class="panel">
+        <div class="left">
+          <h1 class="glow-3d">Hi, I'm <span>PK DARK</span></h1>
+          <p class="tagline">B.Arch Student | Tech Enthusiast | Creative Designer</p>
+          <p class="lead">
+            Welcome to my Pro technical portfolio — I craft architectural & interface experiences
+            with a strong focus on technical detail, visualization, and intelligent systems.
+            I combine architecture, engineering visualization and front-end engineering to produce futuristic, usable designs.
+          </p>
+
+          <div class="connect">
+            <span>Connect with me:</span>
+            <a href="https://www.linkedin.com/in/praveen-kumar-034274309/" target="_blank" rel="noopener" class="link-3d">LinkedIn</a>
+            <a href="https://github.com/KPSkumar143" target="_blank" rel="noopener" class="link-3d">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="right profile-3d">
+          <div class="profile-photo">
+            <!-- Replace with real image in assets/profile.jpg -->
+            <img src="IMG_20250619_110245_099(1).webp" alt="PK DARK profile photo (placeholder)" />
+          </div>
+          <ul class="quick-stats">
+            <li><strong>B.Arch</strong><small>2nd Year</small></li>
+            <li><strong>Magesh</strong><small>Close Friend</small></li>
+            <li><strong>CM Mohan</strong><small>Close Friend</small></li>
+          </ul>
+        </aside>
+      </div>
     </section>
 
-    <section id="about" class="page">
-      <h2 class="glow-3d">About Me</h2>
-      <div class="about-container">
-        <div class="profile-photo">
-          <img src="IMG_20250619_110245_099 (1).webp" alt="PK DARK Profile Photo" />
-        </div>
-        <div class="about-text">
-          <p>
-            I am a passionate B.Arch student focused on blending architecture with engineering and technology to craft innovative solutions. My designs are inspired by modern tech trends and futuristic visions.
-          </p>
-          <p>
-            With a strong foundation in CAD, UI/UX, and AI basics, I’m always eager to push the boundaries between creativity and technical expertise.
-          </p>
+    <!-- ABOUT -->
+    <section id="about" class="page page-3d" data-title="About">
+      <div class="panel">
+        <h2 class="glow-3d">About Me</h2>
+        <p class="lead">
+          I treat design as systems: form, structure, and code. My projects aim to synthesize architectural clarity
+          with data-informed user experiences. I work across AutoCAD & 3D modeling, front-end web tech, and exploratory AI prototypes.
+        </p>
+        <div class="cards-3d about-cards">
+          <div class="card-3d">
+            <h3>Approach</h3>
+            <p>Human-centered, technically precise, future-ready.</p>
+          </div>
+          <div class="card-3d">
+            <h3>Tools</h3>
+            <p>AutoCAD, Rhino, Blender, HTML/CSS/JS, ML basics.</p>
+          </div>
+          <div class="card-3d">
+            <h3>Goal</h3>
+            <p>Create immersive architecture & interfaces that scale.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="page">
-      <h2 class="glow-3d">Skills</h2>
-      <p class="section-paragraph">
-        I have developed a balanced set of skills combining creativity and technical knowledge, showcased below with 3D glowing progress bars.
-      </p>
-      <ul class="skills-list">
-        <li>
-          AutoCAD & 3D Design
-          <div class="skill-bar-3d" data-percent="85">
-            <div class="skill-level-3d"></div>
-            <span class="skill-percent-3d">85%</span>
-          </div>
-        </li>
-        <li>
-          HTML, CSS, JavaScript
-          <div class="skill-bar-3d" data-percent="75">
-            <div class="skill-level-3d"></div>
-            <span class="skill-percent-3d">75%</span>
-          </div>
-        </li>
-        <li>
-          AI & Machine Learning Basics
-          <div class="skill-bar-3d" data-percent="60">
-            <div class="skill-level-3d"></div>
-            <span class="skill-percent-3d">60%</span>
-          </div>
-        </li>
-        <li>
-          UI/UX Design
-          <div class="skill-bar-3d" data-percent="70">
-            <div class="skill-level-3d"></div>
-            <span class="skill-percent-3d">70%</span>
-          </div>
-        </li>
-        <li>
-          Engineering Visualization
-          <div class="skill-bar-3d" data-percent="80">
-            <div class="skill-level-3d"></div>
-            <span class="skill-percent-3d">80%</span>
-          </div>
-        </li>
-      </ul>
+    <!-- SKILLS -->
+    <section id="skills" class="page page-3d" data-title="Skills">
+      <div class="panel">
+        <h2 class="glow-3d">Skills</h2>
+        <p class="lead">A mix of creative design and technical engineering skills — shown below with 3D percentage bars.</p>
+
+        <ul class="skills-grid">
+          <li class="skill-item">
+            <div class="skill-head">AutoCAD & 3D Design</div>
+            <div class="skill-bar-3d" data-percent="85">
+              <div class="bar-fill" style="width:0%"></div>
+              <div class="percent-badge">0%</div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-head">HTML, CSS, JavaScript</div>
+            <div class="skill-bar-3d" data-percent="75">
+              <div class="bar-fill" style="width:0%"></div>
+              <div class="percent-badge">0%</div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-head">AI & Machine Learning Basics</div>
+            <div class="skill-bar-3d" data-percent="60">
+              <div class="bar-fill" style="width:0%"></div>
+              <div class="percent-badge">0%</div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-head">UI/UX Design</div>
+            <div class="skill-bar-3d" data-percent="70">
+              <div class="bar-fill" style="width:0%"></div>
+              <div class="percent-badge">0%</div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-head">Engineering Visualization</div>
+            <div class="skill-bar-3d" data-percent="80">
+              <div class="bar-fill" style="width:0%"></div>
+              <div class="percent-badge">0%</div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="projects" class="page">
-      <h2 class="glow-3d">Projects</h2>
-      <p class="section-paragraph">
-        Below are some of my key projects combining architecture, AI, and creative design with project visuals.
-      </p>
-      <div class="project-grid">
-        <div class="project-card-3d">
-          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80');"></div>
-          <h3>AI-Driven Movie Recommendation</h3>
-          <p>Personalized recommendation system with marketing insights.</p>
-        </div>
-        <div class="project-card-3d">
-          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80');"></div>
-          <h3>3D Architectural Model</h3>
-          <p>Modern building concept using advanced CAD tools.</p>
-        </div>
-        <div class="project-card-3d">
-          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1529429619126-7ffbff174f59?auto=format&fit=crop&w=600&q=80');"></div>
-          <h3>Creative Urban Planning</h3>
-          <p>Futuristic city layout with sustainable design principles.</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="page page-3d" data-title="Projects">
+      <div class="panel">
+        <h2 class="glow-3d">Projects</h2>
+        <p class="lead">Three selected projects — image placeholders are included, swap with real screenshots in assets/.</p>
+
+        <div class="projects-grid">
+          <article class="project-card-3d">
+            <div class="project-media">
+              <img src="assets/project1.jpg" alt="AI-Driven Movie Recommendation (placeholder)">
+            </div>
+            <div class="project-body">
+              <h3>AI-Driven Movie Recommendation</h3>
+              <p>Personalized recommendation system with marketing insights.</p>
+              <a class="project-link btn-3d" href="#contact">Discuss Project</a>
+            </div>
+          </article>
+
+          <article class="project-card-3d">
+            <div class="project-media">
+              <img src="assets/project2.jpg" alt="3D Architectural Model (placeholder)">
+            </div>
+            <div class="project-body">
+              <h3>3D Architectural Model</h3>
+              <p>Modern building concept using advanced CAD tools.</p>
+              <a class="project-link btn-3d" href="#contact">Discuss Project</a>
+            </div>
+          </article>
+
+          <article class="project-card-3d">
+            <div class="project-media">
+              <img src="assets/project3.jpg" alt="Visualization Prototype (placeholder)">
+            </div>
+            <div class="project-body">
+              <h3>Visualization Prototype</h3>
+              <p>Engineering visualization & interactive mockups.</p>
+              <a class="project-link btn-3d" href="#contact">Discuss Project</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="page">
-      <h2 class="glow-3d">Contact Me</h2>
-      <form id="contactForm" action="https://formspree.io/f/mzzvrpkp" method="POST" class="contact-box-3d">
-        <input type="text" name="name" placeholder="Your Name" required autocomplete="off" />
-        <input type="email" name="_replyto" placeholder="Your Email" required autocomplete="off" />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn-3d">Send Message</button>
-        <p id="formStatus" class="form-status"></p>
-      </form>
+    <!-- CONTACT -->
+    <section id="contact" class="page page-3d" data-title="Contact">
+      <div class="panel">
+        <h2 class="glow-3d">Contact Me</h2>
+        <p class="lead">Use the contact box below or reach me on LinkedIn/GitHub. The form posts to Formspree (replace with your form ID if needed).</p>
+
+        <div class="contact-layout">
+          <!-- 3D contact card -->
+          <form id="contactForm3d" class="contact-card-3d" method="POST" action="https://formspree.io/f/mzzvrpkp" novalidate>
+            <div class="contact-inner">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required placeholder="Your name">
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="_replyto" required placeholder="you@example.com">
+              </label>
+
+              <label>
+                <span>Subject</span>
+                <input type="text" name="subject" placeholder="Subject (optional)">
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+              </label>
+
+              <div class="contact-actions">
+                <button type="submit" class="btn-3d primary">Send Message</button>
+                <button type="button" id="contactTest" class="btn-3d">Test Local</button>
+              </div>
+
+              <div id="contactStatus" class="contact-status" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <!-- quick info (3D) -->
+          <aside class="contact-info-3d">
+            <h3>Quick Connect</h3>
+            <p>Prefer direct messaging? Find me on LinkedIn or check code on GitHub.</p>
+            <a href="https://www.linkedin.com/in/praveen-kumar-034274309/" class="link-3d" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/KPSkumar143" class="link-3d" target="_blank" rel="noopener">GitHub</a>
+            <p class="muted">© 2025 PK DARK</p>
+          </aside>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 PK DARK | All Rights Reserved</p>
+  <footer class="site-footer">
+    <div>© 2025 PK DARK | All Rights Reserved</div>
   </footer>
 
   <script src="script.js"></script>
